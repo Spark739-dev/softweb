@@ -1272,6 +1272,14 @@ Publish the website in the given URL.
 ## OUTPUT:
 ## FOR LOOKPAGE(restdesign.html):
 ![1](web1.png)
-
+## FOR HOMEPAGE(home.html):
+![1](../web2.png)
+## FOR MENUPAGE(menus1.html):
+![1](../web3.1.png)
+![1](<../web 3.2.png>)
+## FOR ADMINISTRATION PAGE(admins1.html):
+![1](../web4.png)
+## FOR CONTACTPAGE(contact.html):
+![1](../web5.png)
 ## RESULT:
 The program for designing software company website using HTML and CSS is completed successfully.
