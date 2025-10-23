@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Home Section</title>
+    <style>
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px; 
+            background-color: #f0f0f0; 
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; 
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        
+        .home-section-container {
+            width: 100%;
+            max-width: 1200px; 
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 30px; 
+            justify-content: center; 
+            padding: 30px 0;
+        }
+
+         
+        .info-card {
+            background-color: #ffe0b2;  
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            flex: 1;  
+            min-width: 280px;  
+            max-width: 350px;  
+            display: flex;
+            flex-direction: column;
+            color: #333;
+            text-align: center;  
+        }
+
+        .card-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #333;
+            margin: 25px 20px 15px 20px;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px; 
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;  
+            display: block;
+        }
+
+        .card-content {
+            padding: 0 20px 25px 20px;  
+            flex-grow: 1;  
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-content p {
+            font-size: 0.95em;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .card-link {
+            display: inline-block;
+            color: #007bff;  
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: auto;  
+        }
+
+        .card-link:hover {
+            text-decoration: underline;
+        }
+
+         
+        .booking-form {
+            text-align: left;  
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+            color: #444;
+            font-weight: 600;
+        }
+
+        .form-group input[type="date"],
+        .form-group input[type="time"],
+        .form-group input[type="number"],
+        .form-group input[type="text"] {  
+            width: calc(100% - 20px);  
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 0.9em;
+            box-sizing: border-box;
+        }
+        
+        .form-group input[type="submit"] {
+            background-color: #ff9800;  
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #e68900;
+        }
+
+        
+        .opening-hours-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center; 
+        }
+
+        .opening-hours-list li {
+            font-size: 1em;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        .opening-hours-list li strong {
+            color: #333;
+        }
+
+
+        
+        @media (max-width: 992px) {
+            .info-card {
+                max-width: 45%; 
+            }
+        }
+
+        @media (max-width: 768px) {
+            .home-section-container {
+                flex-direction: column; 
+                align-items: center;
+                padding: 20px 0;
+            }
+            .info-card {
+                min-width: unset;
+                width: 90%; 
+                max-width: 400px; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="home-section-container">
+
+        <div class="info-card">
+            <h2 class="card-title">Our New Menu</h2>
+            <div class="card-image">
+                <img src="food1.jpg" alt="Variety of Asian dishes"> </div>
+            <div class="card-content">
+                <p>Explore our latest culinary creations! Our chefs have curated a selection of dishes using the freshest seasonal ingredients, promising a delightful dining experience for every palate.</p>
+                <a href="menus1.html" class="card-link">See our menu</a>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2 class="card-title">Book a Table</h2>
+            <div class="card-image">
+                <img src="food2.jpg" alt="Variety of Indian dishes"> </div>
+            <div class="card-content booking-form">
+                <p>Reserve your spot for an unforgettable dining experience. Fill out the form below and we'll confirm your booking shortly.</p>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="booking-name">Your Name:</label>
+                        <input type="text" id="booking-name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-date">Date:</label>
+                        <input type="date" id="booking-date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-time">Time:</label>
+                        <input type="time" id="booking-time" name="time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-guests">Number of Guests:</label>
+                        <input type="number" id="booking-guests" name="guests" min="1" max="10" value="2" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Book your table now">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2 class="card-title">Opening Hours</h2>
+            <div class="card-image">
+                <img src="food3.jpg" alt="Assortment of fresh food items"> </div>
+            <div class="card-content">
+                <p>Plan your visit to our restaurant. We look forward to serving you our finest dishes during these hours:</p>
+                <ul class="opening-hours-list">
+                    <li><strong>Mon - Fri:</strong> 2pm - 10pm</li>
+                    <li><strong>Sat:</strong> 2pm - 11pm</li>
+                    <li><strong>Sun:</strong> 2pm - 9pm</li>
+                </ul>
+                </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

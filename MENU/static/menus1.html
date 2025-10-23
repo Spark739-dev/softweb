@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Food Menu</title>
+    <style>
+         
+        body {
+            margin: 0;
+            font-family: 'Georgia', serif;  
+            background-color: #2c3e50; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .menu-container {
+            width: 100%;
+            max-width: 900px;  
+            background-color: #3f513f;  
+            color: #f0f0f0;  
+            border-radius: 10px;
+            overflow: hidden;  
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        
+        .menu-background {
+            background-image: url('https://i.imgur.com/your_image_link_here.jpg');  
+            background-size: cover;
+            background-position: center;
+            padding: 50px 70px;  
+            position: relative;
+            z-index: 1;
+        }
+
+        .menu-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.2);  
+            z-index: -1;
+        }
+
+         
+        .menu-header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;  
+        }
+
+        .menu-header .logo {
+            position: absolute;
+            top: 0px;  
+            right: 0px;  
+            width: 100px;  
+            height: auto;
+            color: #d4a762;  
+            font-family: 'Times New Roman', serif;
+            font-size: 0.8em;
+            line-height: 1.2;
+            text-align: right;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+         .menu-header .logo strong {
+            display: block;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+         }
+         .menu-header .logo span {
+            font-size: 0.8em;
+            opacity: 0.8;
+         }
+
+
+        .menu-header h1 {
+            font-family: 'Dancing Script', cursive;  
+            font-size: 5em;
+            color: #fff;  
+            margin: 0;
+            font-weight: normal;
+        }
+
+         
+        .menu-content {
+            display: flex;
+            flex-wrap: wrap;  
+            gap: 40px;  
+            justify-content: space-between;
+        }
+
+        .menu-column {
+            flex: 1;  
+            min-width: 300px;  
+            max-width: 48%;  
+            box-sizing: border-box;
+        }
+
+         
+        .menu-category {
+            margin-bottom: 30px;
+        }
+
+        .menu-category h2 {
+            font-family: 'Playfair Display', serif;  
+            font-size: 1.8em;
+            color: #d4a762;  
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(212, 167, 98, 0.4);  
+        }
+
+         
+        .menu-item {
+            margin-bottom: 20px;
+        }
+
+        .item-title-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;  
+            margin-bottom: 5px;
+        }
+
+        .item-title {
+            font-family: 'Lato', sans-serif;  
+            font-size: 1.3em;
+            color: #ffffff;  
+            font-weight: 600;
+        }
+
+        .item-price {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.3em;
+            color: #d4a762;  
+            font-weight: 600;
+            margin-left: 15px;  
+            white-space: nowrap;  
+        }
+
+        .item-description {
+            font-family: 'Open Sans', sans-serif;  
+            font-size: 0.95em;
+            color: #e0e0e0;  
+            line-height: 1.4;
+            margin-top: -5px;  
+        }
+
+         
+        .menu-footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #d4a762;
+            font-family: 'Lato', sans-serif;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+        }
+
+         
+        @media (max-width: 768px) {
+            .menu-background {
+                padding: 30px 40px;
+            }
+            .menu-header h1 {
+                font-size: 4em;
+            }
+            .menu-content {
+                flex-direction: column;  
+                gap: 20px;
+            }
+            .menu-column {
+                min-width: 100%;
+                max-width: 100%;
+            }
+             .menu-header .logo {
+                position: static;
+                text-align: center;
+                margin-bottom: 20px;
+             }
+        }
+        @media (max-width: 480px) {
+            .menu-background {
+                padding: 20px;
+            }
+            .menu-header h1 {
+                font-size: 3em;
+            }
+            .menu-category h2 {
+                font-size: 1.5em;
+            }
+            .item-title, .item-price {
+                font-size: 1.1em;
+            }
+            .item-description {
+                font-size: 0.9em;
+            }
+        }
+
+         
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&family=Lato:wght@400;600&family=Open+Sans:wght@400&display=swap');
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="menu-background">
+            <div class="menu-header">
+                <div class="logo">
+                    <strong>HIMALAYABLISS</strong><br>
+                    <span>Restaurant of Heaven</span>
+                </div>
+                <h1>Menu</h1>
+            </div>
+
+            <div class="menu-content">
+                <div class="menu-column">
+                    <div class="menu-category">
+                        <h2>Appetizers</h2>
+                        <div class="menu-item">
+                            <div class="item-title-price">
+                                <span class="item-title">Caprese Skewers</span>
+                                <span class="item-price">$15.00</span>
+                            </div>
+                            <p class="item-description">Fresh mozzarella, cherry tomatoes, and basil, drizzled with balsamic glaze.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-title-price">
+                                <span class="item-title">Spicy Chicken Wings</span>
+                                <span class="item-price">$20.00</span>
+                            </div>
+                            <p class="item-description">Crispy wings tossed in a fiery house-made sauce, served with blue cheese dip.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-title-price">
+                                <span class="item-title">Vegetable Samosa</span>
+                                <span class="item-price">$10.00</span>
+                            </div>
+                            <p class="item-description">Savory pastry filled with spiced potatoes and peas, served with mint chutney.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-title-price">
+                                <span class="item-title">MUTTON 65</span>
+                                <span class="item-price">$4.00</span>
+                            </div>
+                            <p class="item-description">Spicy, deep-fried boneless mutton pieces, a Southern Indian delicacy.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-title-price">
+                                <span class="item-title">Tomato Soup</span>
+                                <span class="item-price">$10.00</span>
+                            </div>
+                            <p class="item-description">Creamy roasted tomato soup, served with herbed croutons.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-category">
+                        <h2>Salads</h2>
+                        <div class="menu-item">
+                            <div class="item-title-price">
+                                <span class="item-title">Quinoa Salad</span>
+                                <span class="item-price">$10.00</span>
+                            </div>
+                            <p class="item-description">Healthy quinoa with mixed greens, cranberries, and a citrus vinaigrette.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-title-price">
+                                <span class="item-title">Spinach Salad</span>
+                                <span class="item-price">$20.00</span>
+                            </div>
+                            <p class="item-description">Fresh spinach, strawberries, candied pecans, and poppy seed dressing.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-title-price">
+                                <span class="item-title">Eggplant Salad</span>
+                                <span class="item-price">$30.00</span>
+                            </div>
+                            <p class="item-description">Grilled eggplant, roasted bell peppers, and feta cheese with a lemon-herb dressing.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-title-price">
+                                <span class="item-title">Chicken Salad</span>
+                                <span class="item-price">$50.00</span>
+                            </div>
+                            <p class="item-description">Grilled chicken, crisp lettuce, tomatoes, and cucumber with a creamy dressing.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-title-price">
+                                <span class="item-title">Green Salad</span>
+                                <span class="item-price">$40.00</span>
+                            </div>
+                            <p class="item-description">Mixed seasonal greens with a light vinaigrette.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-title-price">
+                                <span class="item-title">Pasta Salad</span>
+                                <span class="item-price">$60.00</span>
+                            </div>
+                            <p class="item-description">Tricolor pasta, fresh vegetables, and Italian dressing.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-column">
+                    <div class="menu-category">
+                        <h2>Main Courses</h2>
+                        <div class="menu-item">
+                            <div class="item-title-price">
+                                <span class="item-title">Beef Stir-Fry</span>
+                                <span class="item-price">$20.00</span>
+                            </div>
+                            <p class="item-description">Tender beef strips, crisp vegetables, and savory stir-fry sauce, served with rice.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-title-price">
+                                <span class="item-title">Shrimp Tacos</span>
+                                <span class="item-price">$10.00</span>
+                            </div>
+                            <p class="item-description">Grilled shrimp, fresh slaw, and spicy crema in soft tortillas.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-title-price">
+                                <span class="item-title">Mushroom Risotto</span>
+                                <span class="item-price">$25.00</span>
+                            </div>
+                            <p class="item-description">Creamy Arborio rice with wild mushrooms, parmesan, and truffle oil.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-title-price">
+                                <span class="item-title">Chicken Fried Rice</span>
+                                <span class="item-price">$30.00</span>
+                            </div>
+                            <p class="item-description">Classic fried rice with tender chicken, eggs, and mixed vegetables.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-title-price">
+                                <span class="item-title">Eggplant Parmesan</span>
+                                <span class="item-price">$40.00</span>
+                            </div>
+                            <p class="item-description">Layers of breaded eggplant, rich marinara, and melted mozzarella.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-category">
+                        <h2>Desserts</h2>
+                        <div class="menu-item">
+                            <div class="item-title-price">
+                                <span class="item-title">Tiramisu</span>
+                                <span class="item-price">$7.00</span>
+                            </div>
+                            <p class="item-description">Classic Italian coffee-flavored dessert with mascarpone cheese.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-title-price">
+                                <span class="item-title">Fruit Tart</span>
+                                <span class="item-price">$5.00</span>
+                            </div>
+                            <p class="item-description">Fresh seasonal fruits atop a sweet pastry cream in a crisp tart shell.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-title-price">
+                                <span class="item-title">CheeseCake</span>
+                                <span class="item-price">$10.00</span>
+                            </div>
+                            <p class="item-description">Creamy New York style cheesecake with a graham cracker crust.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-title-price">
+                                <span class="item-title">Apple Pie</span>
+                                <span class="item-price">$9.00</span>
+                            </div>
+                            <p class="item-description">Warm apple pie with a flaky crust, served with a scoop of vanilla ice cream.</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-title-price">
+                                <span class="item-title">Chocolate Lava Cake</span>
+                                <span class="item-price">$8.00</span>
+                            </div>
+                            <p class="item-description">Decadent molten chocolate cake, served with a berry coulis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-footer">
+                <p>www.himalayabliss.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

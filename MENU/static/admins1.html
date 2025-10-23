@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration & Collaborators</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            background-color: #f7f7f7;  
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+         
+        .section-title {
+            font-size: 2.2em;
+            color: #333;
+            margin-bottom: 50px;
+            font-weight: 600;
+            border-bottom: 3px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        
+        .collaborators-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1000px;
+        }
+
+        
+        .collaborator-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;  
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .collaborator-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+         
+        .card-header {
+            display: flex;
+            align-items: center;
+            padding: 20px 20px 10px 20px;
+        }
+
+        .collaborator-image {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+            border: 3px solid #ffcc66; 
+        }
+
+        .collaborator-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .collaborator-name {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        
+        .collaborator-designation {
+            padding: 10px 20px;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+         
+        .tag-orange {
+            background-color: #ffaa33;  
+        }
+        .tag-blue {
+            background-color: #33aaff;  
+        }
+
+         
+        .collaborator-details {
+            padding: 10px 20px 20px 20px;
+            font-size: 0.9em;
+            line-height: 1.5;
+            color: #666;
+        }
+
+         
+        @media (max-width: 650px) {
+            .collaborators-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .collaborator-card {
+                width: 90%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="section-title">Administration & Collaborators</h1>
+
+    <div class="collaborators-grid">
+        
+        <div class="collaborator-card">
+            <div class="card-header">
+                <div class="collaborator-image">
+                    <img src="Mark.webp" alt="Mark Zuckerberg">
+                </div>
+                <div class="collaborator-name">Mark Zuckerberg</div>
+            </div>
+            <div class="collaborator-designation tag-orange">
+                 Chief Strategist
+            </div>
+            <div class="collaborator-details">
+                **Details:** Mr. Zuckerberg provides executive oversight on global platform integration and guides our long-term vision for community engagement and digital strategy.
+            </div>
+        </div>
+
+        <div class="collaborator-card">
+            <div class="card-header">
+                <div class="collaborator-image">
+                    <img src="gates1.webp" alt="Bill Gates">
+                </div>
+                <div class="collaborator-name">Bill Gates</div>
+            </div>
+            <div class="collaborator-designation tag-blue">
+                Lead Technology Advisor
+            </div>
+            <div class="collaborator-details">
+                **Details:** Mr. Gates focuses on leveraging emerging technologies to enhance our operational efficiency and supports our initiatives in sustainable growth and resource management.
+            </div>
+        </div>
+
+        <div class="collaborator-card">
+            <div class="card-header">
+                <div class="collaborator-image">
+                    <img src="jeff.webp" alt="Jeff Bezos">
+                </div>
+                <div class="collaborator-name">Jeff Bezos</div>
+            </div>
+            <div class="collaborator-designation tag-orange">
+                E-commerce & Logistics Partner
+            </div>
+            <div class="collaborator-details">
+                **Details:** Mr. Bezos collaborates on optimizing supply chain logistics and scaling operations across vast geographical markets with high-volume precision and reliability.
+            </div>
+        </div>
+        
+        <div class="collaborator-card">
+            <div class="card-header">
+                <div class="collaborator-image">
+                    <img src="ceo.jpg" alt="Veshwanth R">
+                </div>
+                <div class="collaborator-name">Veshwanth R</div>
+            </div>
+            <div class="collaborator-designation tag-blue">
+                Founder and CEO
+            </div>
+            <div class="collaborator-details">
+                **Details:** Founder and CEO of the restaurant HIMALAYA BLISS provides a fine dining restaurant as in top of the Multi-Cuisine Restaurant.
+            </div>
+        </div>
+
+        <div class="collaborator-card">
+            <div class="card-header">
+                <div class="collaborator-image">
+                    <img src="joel.jpg" alt="Placeholder Admin">
+                </div>
+                <div class="collaborator-name">Joel Austin</div>
+            </div>
+            <div class="collaborator-designation tag-orange">
+                Head of Finance
+            </div>
+            <div class="collaborator-details">
+                **Details:** Responsible for all financial planning, reporting, and investor relations, ensuring robust fiscal health and transparency.
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

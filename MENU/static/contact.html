@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Modern Layout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+       
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #2c3e50; 
+            color: #ecf0f1; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;  
+            overflow: auto;  
+        }
+
+        .contact-page-wrapper {
+            width: 90%;
+            max-width: 1200px;
+            padding: 40px;
+            background-color: #34495e;  
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            
+             
+            background-image: url('https://images.unsplash.com/photo-1519782800346-411a7741695f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTMzNXwwfDF8c2VhcmNofDEzfHxjaXR5c2NhcGUlMjBkYXJrfGVufDB8fHx8MTcwOTI4NjkwMHww&ixlib=rb-4.0.3&q=80&w=1080'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;  
+            z-index: 1;  
+        }
+
+         
+        .contact-page-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6);  
+            border-radius: 10px;
+            z-index: -1;  
+        }
+
+         
+        .header-content {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #ffffff;  
+        }
+
+        .header-content h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .header-content p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #bdc3c7;  
+        }
+
+         
+        .main-content-area {
+            display: flex;
+            flex-wrap: wrap;  
+            gap: 40px;  
+            justify-content: center;
+        }
+
+         
+        .contact-details-column {
+            flex: 1;  
+            min-width: 300px;  
+            padding: 20px;
+            color: #ecf0f1;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: flex-start;  
+            margin-bottom: 30px;
+        }
+
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #ecf0f1;  
+            color: #2c3e50;  
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            margin-right: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .detail-text h3 {
+            margin: 0 0 5px 0;
+            font-size: 1.4em;
+            color: #ffffff;
+        }
+
+        .detail-text p {
+            margin: 0;
+            font-size: 1em;
+            line-height: 1.5;
+            color: #bdc3c7;
+        }
+
+         
+        .contact-form-column {
+            flex: 1;  
+            min-width: 350px;  
+            background-color: #ffffff;  
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            color: #2c3e50;  
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+            color: #34495e;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 0;  
+            border: none;  
+            border-bottom: 1px solid #ccc;  
+            font-size: 1.1em;
+            color: #34495e;
+            background-color: transparent;  
+            box-sizing: border-box;  
+            outline: none;  
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #95a5a6;  
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-bottom-color: #3498db; 
+        }
+
+        .form-group textarea {
+            resize: vertical;  
+            min-height: 80px;
+        }
+
+        .send-button {
+            width: 100%;
+            padding: 15px;
+            background-color: #1abc9c; 
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .send-button:hover {
+            background-color: #16a085;  
+        }
+
+         
+        @media (max-width: 768px) {
+            .main-content-area {
+                flex-direction: column;  
+                gap: 20px;
+            }
+
+            .contact-page-wrapper {
+                padding: 30px;
+                width: 95%;
+            }
+
+            .header-content h1 {
+                font-size: 2.5em;
+            }
+
+            .header-content p {
+                font-size: 1em;
+            }
+
+            .contact-details-column,
+            .contact-form-column {
+                min-width: unset;  
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-page-wrapper">
+        <div class="header-content">
+            <h1>Contact Us</h1>
+            <p>For inquiries regarding **Food Quality, Hygiene, Sanitation, or Facility Maintenance**, please use the form below. We prioritize maintaining the highest standards of safety and operational excellence.</p>
+        </div>
+
+        <div class="main-content-area">
+            <div class="contact-details-column">
+                <div class="detail-item">
+                    <div class="icon-circle"><i class="fas fa-home"></i></div>
+                    <div class="detail-text">
+                        <h3>Address</h3>
+                        <p>4871 Sugar Campcross Road,<br>Owatonna, Minnesota,<br>55060</p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <div class="icon-circle"><i class="fas fa-phone-alt"></i></div>
+                    <div class="detail-text">
+                        <h3>Phone</h3>
+                        <p>561-456-2321</p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+                    <div class="detail-text">
+                        <h3>Email</h3>
+                        <p>himalayasbliss3@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-column">
+                <div class="form-container">
+                    <h2>Send Message</h2>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" id="fullName" placeholder="Full Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Type your Message..." rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="send-button">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

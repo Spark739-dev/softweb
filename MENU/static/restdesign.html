@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIMALAYA BLISS - RESTAURANT DESIGN</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Courier New', monospace;
+            background-color: #f1f3f1;
+        }
+
+       
+        .header {
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .header img {
+            height: 100px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            color: #3f5a52;
+            letter-spacing: 3px;
+            margin-top: 10px;
+        }
+
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #2f2f2f;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto 30px auto; 
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 20px 40px;
+            font-size: 1.2em;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #3f5a52;
+            border-radius: 20px;
+        }
+
+        
+        .main-hero-image {
+            display: block; 
+            max-width: 90%;
+            height: auto;
+            margin: 30px auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .image-gallery img {
+            max-width: 100%;
+            height: auto;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 768px) {
+            nav a {
+                padding: 15px 15px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="header.png" alt="HIMALAYA BLISS LOGO">
+        <h1>HIMALAYA BLISS</h1>
+    </div>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="menus1.html">Menu</a>
+        <a href="admins1.html">Administration</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    
+    
+
+    <div class="image-gallery">
+        <img src="images1.jpeg" alt="FOODS1">
+        <img src="images2.webp" alt="FOODS2">
+        <img src="images3.jpeg" alt="FOODS3">
+    </div>
+
+</body>
+</html>
