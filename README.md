@@ -1273,13 +1273,22 @@ Publish the website in the given URL.
 ## FOR LOOKPAGE(restdesign.html):
 ![1](web1.png)
 ## FOR HOMEPAGE(home.html):
-![1](../web2.png)
+<img width="1918" height="1198" alt="web2" src="https://github.com/user-attachments/assets/f7372e26-e55c-49c0-ad67-62bcfe748b55" />
+
 ## FOR MENUPAGE(menus1.html):
-![1](../web3.1.png)
-![1](<../web 3.2.png>)
+
+<img width="1918" height="1198" alt="web3 1" src="https://github.com/user-attachments/assets/087a3254-7bc1-47e5-bb5d-3e9a414dd820" />
+
+<img width="1917" height="1197" alt="web 3 2" src="https://github.com/user-attachments/assets/1698a6da-42dc-4d69-8a82-1b34de715cc6" />
+
+
 ## FOR ADMINISTRATION PAGE(admins1.html):
-![1](../web4.png)
+
+<img width="1916" height="1198" alt="web4" src="https://github.com/user-attachments/assets/e58b6c14-c8a0-4dfe-88f3-a334226e98ba" />
+
 ## FOR CONTACTPAGE(contact.html):
-![1](../web5.png)
+
+<img width="1918" height="1198" alt="web5" src="https://github.com/user-attachments/assets/804e7001-a43c-42c6-967b-518368ecbd07" />
+
 ## RESULT:
 The program for designing software company website using HTML and CSS is completed successfully.
