@@ -141,7 +141,9 @@ Publish the website in the given URL.
             <img src="images2.webp" alt="FOODS2">
             <img src="images3.jpeg" alt="FOODS3">
         </div>
-
+        <footer align="center">
+        <p>MADE BY VESHWANTH.</p>
+    </footer>
     </body>
     </html>
 
@@ -1271,7 +1273,8 @@ Publish the website in the given URL.
     </html>
 ## OUTPUT:
 ## FOR LOOKPAGE(restdesign.html):
-![1](web1.png)
+<img width="1913" height="1199" alt="image" src="https://github.com/user-attachments/assets/399b30a1-a7f1-42c1-b8a4-58d2d3471206" />
+
 ## FOR HOMEPAGE(home.html):
 <img width="1918" height="1198" alt="web2" src="https://github.com/user-attachments/assets/f7372e26-e55c-49c0-ad67-62bcfe748b55" />
 
